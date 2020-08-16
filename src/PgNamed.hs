@@ -83,6 +83,7 @@ data PgNamedError
     | PgNoNames PG.Query
     -- | Query contains an empty name.
     | PgEmptyName PG.Query
+    -- | Query failed to evaluate due to database error.
     | PgSqlError PG.SqlError
     deriving stock (Eq)
 
